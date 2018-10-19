@@ -31,6 +31,9 @@ authorize_docker() {
 deploy_image() {
     export BASE_URL=${BASE_URL}
     export SERVER_API_BASE_URL=${SERVER_API_BASE_URL}
+    export G_SUITE_DOMAIN=${G_SUITE_DOMAIN}
+    export ANDELA_API_BASE_URL=${ANDELA_API_BASE_URL}
+    export CLIENT_ID=${CLIENT_ID}
     cd client && npm run build && cd ..
     make build_frontend
 
