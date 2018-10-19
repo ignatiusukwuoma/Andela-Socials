@@ -42,7 +42,6 @@ services:
 
     environment:
         - SERVER_API_BASE_URL=http://api-staging-socials.andela.com/graphql
-        - NODE_ENV=production
     ports:
         - 9000:9000
     depends_on:
