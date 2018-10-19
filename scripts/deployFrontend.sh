@@ -29,6 +29,8 @@ authorize_docker() {
 }
 
 deploy_image() {
+    export BASE_URL=${BASE_URL}
+    export SERVER_API_BASE_URL=${SERVER_API_BASE_URL}
     cd client && npm run build && cd ..
     make build_frontend
 
